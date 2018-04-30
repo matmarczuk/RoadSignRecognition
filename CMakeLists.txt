@@ -1,5 +1,12 @@
 cmake_minimum_required(VERSION 2.8)
 project( SignsRecognition )
 find_package( OpenCV REQUIRED )
-add_executable( SignsRecognition main.cpp )
+
+file(GLOB SignsRecognition_SRC
+    "*.h"
+    "*.cpp"
+    "*.hpp"
+)
+
+add_executable(SignsRecognition ${SignsRecognition_SRC})
 target_link_libraries( SignsRecognition ${OpenCV_LIBS} )

@@ -1,19 +1,32 @@
 #include <opencv2/opencv.hpp>
 
+using namespace std;
+
 class Sign{
-enum typ{
-ostrzegawczy =1,
-zakazu,
-nakazu,
-informacyjne
+public:
+    /*
+    enum typ{
+        ostrzegawczy =1,
+        zakazu,
+        nakazu,
+        informacyjny
+    };
 
-};
 
+    enum nazwa{
+        pierwszenstwo=1,
+        zakaz_wjazdu,
+        stop
+    };
+    */
+    string nazwa;
+    string typ;
 
-enum nazwa{
-pierwszenstwo=1,
-zakaz_wjazdu,
-stop
-};
+    cv :: Mat znak;
+
+    int x,y;
+    int w,h;
+
+    Sign();
 
 };

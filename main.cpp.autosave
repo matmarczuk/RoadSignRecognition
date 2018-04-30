@@ -32,7 +32,7 @@ int main() {
         // Normalize the distance image for range = {0.0, 1.0}
 
         // so we can visualize and threshold it
-        normalize(dist, dist, 0, 1., NORM_MINMAX);
+        normalize(dist, dist, 0, 1.75, NORM_MINMAX);
         imshow("Distance Transform Image", dist);
 
         threshold(dist, dist, .2, 2., CV_THRESH_BINARY);
