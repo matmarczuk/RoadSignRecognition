@@ -7,6 +7,7 @@ file(GLOB SignsRecognition_SRC
     "*.cpp"
     "*.hpp"
 )
+add_subdirectory(/home/mateusz/dlib dlib_build)
 
 add_executable(SignsRecognition ${SignsRecognition_SRC})
 target_link_libraries( SignsRecognition ${OpenCV_LIBS} )
